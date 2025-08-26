@@ -17,8 +17,8 @@
   
 ## System Design
   - ### System Requirements
-    - OOO
-    - OOO
+    - 실험 설명 및 실험 사진 첨부하기
+    - 
     
 ## Case Study
   - ### Description
