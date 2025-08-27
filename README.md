@@ -54,13 +54,12 @@
 
 
   + BLE 공격 기법 비교표
-  
-  | 항목 | BtleJuice | GATTacker | InjectaBLE |
-  |---|---|---|---|
-  | **장치/환경** | Bluetooth USB 동글 2개<br>(가짜 앱 / 가짜 장치)<br>Kali Linux | Bluetooth USB 동글 2개<br>(실제 장치 / 피해자 앱)<br>Linux | Bluetooth 스니퍼<br>타이밍 제어 가능 장비<br>(동글 1개도 가능) |
-  | **공격 목적** | - BLE write 무결성 침해<br>- 사용자 기기 제어<br>- GATT 특성 변조 | - BLE 세션 가로채기<br>- 정보 유출<br>- 기능 오용 | - 연결된 BLE 장치 제어<br>- 기능 트리거<br>- 역할 탈취<br>- 민감 정보 탈취 |
-  | **공격 계층** | - Link Layer<br>- SMP<br>- GATT | - GATT | - Link Layer<br>- ATT |
-  | **침해 정도** | 중간자 위치 및<br>전방위 조작 가능 | 가짜 장치로 연결 유도 및<br>데이터 조작 | 중대한 기능 탈취 및<br>역할 조작 가능 |
+    | 항목 | BtleJuice | GATTacker | InjectaBLE |
+    |---|---|---|---|
+    | **장치/환경** | Bluetooth USB 동글 2개<br>(가짜 앱 / 가짜 장치)<br>Kali Linux | Bluetooth USB 동글 2개<br>(실제 장치 / 피해자 앱)<br>Linux | Bluetooth 스니퍼<br>타이밍 제어 가능 장비<br>(동글 1개도 가능) |
+    | **공격 목적** | - BLE write 무결성 침해<br>- 사용자 기기 제어<br>- GATT 특성 변조 | - BLE 세션 가로채기<br>- 정보 유출<br>- 기능 오용 | - 연결된 BLE 장치 제어<br>- 기능 트리거<br>- 역할 탈취<br>- 민감 정보 탈취 |
+    | **공격 계층** | - Link Layer<br>- SMP<br>- GATT | - GATT | - Link Layer<br>- ATT |
+    | **침해 정도** | 중간자 위치 및<br>전방위 조작 가능 | 가짜 장치로 연결 유도 및<br>데이터 조작 | 중대한 기능 탈취 및<br>역할 조작 가능 |
   
   
 ## Conclusion
