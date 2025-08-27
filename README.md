@@ -82,6 +82,5 @@
   
 ## Project Outcome
 - ### 2025년도 한국통신학회 하계학술대회 논문 발표
-  - Hyeonseon Min, Daeun Lee, Kyungmin Park, Taehoon Kim, Inkyu Bang,"Research Trends in Security Vulnerabilities
-of the Bluetooth Protocol" in Proceedings of Symposium of the Korean Institute of communications and Information
-Sciences, 2025
+  - 민현선, 이다은, 박경민, 김태훈, 방인규, "블루투스 프로토콜의 보안 취약점에 대한 연구 동향," 한국통신학회 하계학술대회 논문집, 2025.
+
