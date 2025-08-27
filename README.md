@@ -16,27 +16,27 @@
   - OOO
   
 ## System Design
-  - ### System Requirements
-    - 공통 실험 활경 구축
-      <img width="516" height="252" alt="image" src="https://github.com/user-attachments/assets/6f83e3a5-d1bb-438d-b3a3-b5c1f973edcd" />
-      + 칼리 리눅스 기반 공격 환경 세팅
-      + BLE 지원 동글을 장착한 컴퓨터 A(피해자), 컴퓨터 B(공격자) 구성
-      + BLE 기반 조명 장치 및 AR 수트(진동센서 장착) 연결
-      + Bluepy, BtleJuice 등 오픈소스 툴을 활용한 통신 분석 및 공격 시나리오 설계
+- ### System Requirements
+  + ### 공통 실험 환경 구축
+    <img width="516" height="252" alt="image" src="https://github.com/user-attachments/assets/6f83e3a5-d1bb-438d-b3a3-b5c1f973edcd" />
+    + 칼리 리눅스 기반 공격 환경 세팅
+    + BLE 지원 동글을 장착한 컴퓨터 A(피해자), 컴퓨터 B(공격자) 구성
+    + BLE 기반 조명 장치 및 AR 수트(진동센서 장착) 연결
+    + Bluepy, BtleJuice 등 오픈소스 툴을 활용한 통신 분석 및 공격 시나리오 설계
 
-    - 실험 1: BLE 조명 장치 공격
-      ![image](https://github.com/user-attachments/assets/67cd45d0-8f7d-493a-8ac9-ca3f80eda263)
-      1) 특정 BLE 장치(KocoaFab_BLE)를 스캔하여 UUID 기반 Write Characteristic을 식별
-      2) 값 "2\n" 전송 시 조명의 색상 제어 가능함을 확인
-      3) bleak를 통해 A-PC가 조명과 연결 유지, 연결이 끊기면 B-PC가 즉시 재연결되는 무결성 취약점 실험 수행
+  + ### 실험 1: BLE 조명 장치 공격
+    ![image](https://github.com/user-attachments/assets/67cd45d0-8f7d-493a-8ac9-ca3f80eda263)
+    1) 특정 BLE 장치(KocoaFab_BLE)를 스캔하여 UUID 기반 Write Characteristic을 식별
+    2) 값 "2\n" 전송 시 조명의 색상 제어 가능함을 확인
+    3) bleak를 통해 A-PC가 조명과 연결 유지, 연결이 끊기면 B-PC가 즉시 재연결되는 무결성 취약점 실험 수행
 
-    - 실험 2: AR 수트 진동 센서 공격
-      <img width="409" height="230" alt="image" src="https://github.com/user-attachments/assets/75c2afff-5150-4e20-b9fa-af7fa3925012" />
-      1) 실험 1에서 세팅한 환경을 BLE 조명이 아닌 촉각 수트에 적용하여 실험
-      2) 공격자가 PC 동글을 통해 수트와 모바일 앱 사이의 Bluetooth 통신을 가로채는 환경 구성
-      3) Bluepy를 활용하여 수트의 GATT Characteristic(UUID)에 임의 바이트 payload를 Write → 수트가 이를 진동 세기로 해석하여 동작
-      4) 자동 연결 해제 및 재주입(inject) 코드를 통해 지속적으로 통신 세션을 제어
-      5) 개별 센서 제어 및 세기 조절 가능성을 검증
+  + ### 실험 2: AR 수트 진동 센서 공격
+    <img width="409" height="230" alt="image" src="https://github.com/user-attachments/assets/75c2afff-5150-4e20-b9fa-af7fa3925012" />
+    1) 실험 1에서 세팅한 환경을 BLE 조명이 아닌 촉각 수트에 적용하여 실험
+    2) 공격자가 PC 동글을 통해 수트와 모바일 앱 사이의 Bluetooth 통신을 가로채는 환경 구성
+    3) Bluepy를 활용하여 수트의 GATT Characteristic(UUID)에 임의 바이트 payload를 Write → 수트가 이를 진동 세기로 해석하여 동작
+    4) 자동 연결 해제 및 재주입(inject) 코드를 통해 지속적으로 통신 세션을 제어
+    5) 개별 센서 제어 및 세기 조절 가능성을 검증
 
     
 ## Case Study
