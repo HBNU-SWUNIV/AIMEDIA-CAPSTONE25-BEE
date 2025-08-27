@@ -53,14 +53,14 @@
   + **InjectaBLE**: InjectaBLE은 기존 공격 기법과 달리 이미 연결이 완료된 BLE 세션에서도 공격을 수행할 수 있는 점이 특징이다. 이 공격은 링크 계층의 윈도우 확장(Window Widening) 메커니즘을 악용하여 프레임 전송 타이밍에서 경쟁 조건(Race Condition)을 만들어내고 이 틈을 이용해 악성 패킷을 주입한다. 공격자는 ATT 요청(읽기·쓰기), LL 제어 프레임, CONNECTION UPDATE PDU 등 다양한 메시지를 삽입할 수 있으며, 이를 통해 기기의 특정 기능을 강제로 실행(Trigger)하거나 Master/Slave 역할을 탈취할 수 있다. 또한 기존 연결을 끊지 않고도 공격이 가능하기 때문에 사용자가 눈치채지 못한 상태에서 지속적인 MITM 공격이 가능하다. 이로 인해 BLE 보안 위협 범위가 기존 연결 이전 단계에서 연결 이후 단계로까지 확장되었다는 점에서 중요한 의미가 있다.
 
 
-## BLE 공격 기법 비교표
-
-| 항목 | BtleJuice | GATTacker | InjectaBLE |
-|---|---|---|---|
-| **장치/환경** | Bluetooth USB 동글 2개<br>(가짜 앱 / 가짜 장치)<br>Kali Linux | Bluetooth USB 동글 2개<br>(실제 장치 / 피해자 앱)<br>Linux | Bluetooth 스니퍼<br>타이밍 제어 가능 장비<br>(동글 1개도 가능) |
-| **공격 목적** | - BLE write 무결성 침해<br>- 사용자 기기 제어<br>- GATT 특성 변조 | - BLE 세션 가로채기<br>- 정보 유출<br>- 기능 오용 | - 연결된 BLE 장치 제어<br>- 기능 트리거<br>- 역할 탈취<br>- 민감 정보 탈취 |
-| **공격 계층** | - Link Layer<br>- SMP<br>- GATT | - GATT | - Link Layer<br>- ATT |
-| **침해 정도** | 중간자 위치 및<br>전방위 조작 가능 | 가짜 장치로 연결 유도 및<br>데이터 조작 | 중대한 기능 탈취 및<br>역할 조작 가능 |
+  + BLE 공격 기법 비교표
+  
+  | 항목 | BtleJuice | GATTacker | InjectaBLE |
+  |---|---|---|---|
+  | **장치/환경** | Bluetooth USB 동글 2개<br>(가짜 앱 / 가짜 장치)<br>Kali Linux | Bluetooth USB 동글 2개<br>(실제 장치 / 피해자 앱)<br>Linux | Bluetooth 스니퍼<br>타이밍 제어 가능 장비<br>(동글 1개도 가능) |
+  | **공격 목적** | - BLE write 무결성 침해<br>- 사용자 기기 제어<br>- GATT 특성 변조 | - BLE 세션 가로채기<br>- 정보 유출<br>- 기능 오용 | - 연결된 BLE 장치 제어<br>- 기능 트리거<br>- 역할 탈취<br>- 민감 정보 탈취 |
+  | **공격 계층** | - Link Layer<br>- SMP<br>- GATT | - GATT | - Link Layer<br>- ATT |
+  | **침해 정도** | 중간자 위치 및<br>전방위 조작 가능 | 가짜 장치로 연결 유도 및<br>데이터 조작 | 중대한 기능 탈취 및<br>역할 조작 가능 |
   
   
 ## Conclusion
